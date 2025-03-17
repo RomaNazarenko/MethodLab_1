@@ -14,13 +14,14 @@ def run_game(game_rules, generate_question):
             if user_answer.isdigit():
                 user_answer = int(user_answer)
         except ValueError:
-            print(f"Invalid input! Let's try again, {name}!")
+            print(f"Invalid input, {name}!")
             return
 
         if user_answer == correct_answer:
             print("Correct!")
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
 
